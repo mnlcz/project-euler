@@ -3,10 +3,9 @@
 require 'bootstrap.php';
 
 $limit = 4_000_000;
+$even_sum = 2;
 
-$fibs = collect([2]);
-
-function fib(int $left, int $right, int $limit, \Illuminate\Support\Collection $fibs): void
+function fib(int $left, int $right, int $limit, int &$even_sum): void
 {
     if ($right >= $limit)
         return;
@@ -16,13 +15,11 @@ function fib(int $left, int $right, int $limit, \Illuminate\Support\Collection $
     $right = $sum;
 
     if ($right % 2 === 0)
-        $fibs->add($right);
+        $even_sum += $right;
 
-    fib($left, $right, $limit, $fibs);
+    fib($left, $right, $limit, $even_sum);
 }
 
-fib(1, 2, $limit, $fibs);
+fib(1, 2, $limit, $even_sum);
 
-$sum = $fibs->sum();
-
-var_dump($sum);
+var_dump($even_sum);
