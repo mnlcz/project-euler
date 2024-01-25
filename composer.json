@@ -1,9 +1,9 @@
 {
-    "name": "manuc/project-euler",
+    "name": "mnlcz/project-euler",
     "description": "Project Euler problemset solutions",
     "autoload": {
         "psr-4": {
-            "Manuc\\ProjectEuler\\": "src/"
+            "ProjectEuler\\": "src/"
         }
     },
     "authors": [
