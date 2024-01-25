@@ -1,0 +1,21 @@
+{
+    "name": "manuc/project-euler",
+    "description": "Project Euler problemset solutions",
+    "autoload": {
+        "psr-4": {
+            "Manuc\\ProjectEuler\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "mnlcz",
+            "email": "manuel.lopez.cosmitz@gmail.com"
+        }
+    ],
+    "require": {
+        "illuminate/collections": "^10.42"
+    },
+    "require-dev": {
+        "symfony/var-dumper": "^7.0"
+    }
+}
