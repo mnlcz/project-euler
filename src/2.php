@@ -1,14 +1,12 @@
 <?php
 
-use Illuminate\Support\Collection;
-
 require 'bootstrap.php';
 
 $limit = 4_000_000;
 
 $fibs = collect([2]);
 
-function fib(int $left, int $right, int $limit, Collection $fibs): void
+function fib(int $left, int $right, int $limit, \Illuminate\Support\Collection $fibs): void
 {
     if ($right >= $limit)
         return;
