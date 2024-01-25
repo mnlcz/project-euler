@@ -3,7 +3,7 @@
     "description": "Project Euler problemset solutions",
     "autoload": {
         "psr-4": {
-            "project-euler\\": "src/"
+            "ProjectEuler\\": "src/"
         }
     },
     "authors": [
