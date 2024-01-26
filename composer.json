@@ -13,7 +13,8 @@
         }
     ],
     "require": {
-        "illuminate/collections": "^10.42"
+        "illuminate/collections": "^10.42",
+        "ext-gmp": "*"
     },
     "require-dev": {
         "symfony/var-dumper": "^7.0"
