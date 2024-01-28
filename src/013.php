@@ -1,5 +1,4 @@
 <?php
-use Brick\Math\BigInteger;
 
 /*
  * Work out the first ten digits of the sum of the following one-hundred 50-digit numbers. 
@@ -14,6 +13,8 @@ use Brick\Math\BigInteger;
  */
 
 require 'bootstrap.php';
+
+use Brick\Math\BigInteger;
 
 $raw = <<<END
 37107287533902102798797998220837590246510135740250
