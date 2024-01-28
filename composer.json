@@ -15,7 +15,8 @@
     "require": {
         "illuminate/collections": "^10.42",
         "ext-gmp": "*",
-        "brick/math": "^0.12.1"
+        "brick/math": "^0.12.1",
+        "illuminate/support": "^10.42"
     },
     "require-dev": {
         "symfony/var-dumper": "^7.0"
