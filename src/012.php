@@ -19,7 +19,7 @@
 require 'bootstrap.php';
 
 #region Bruteforce
-function brute_force_triangular_number(int $divisors, int $time_limit = 5): int|string
+function brute_force_triangular_number(int $divisors, int $time_limit = 5) : int|string
 {
     $i = 1;
     $start_time = microtime(true);
@@ -40,7 +40,7 @@ function brute_force_triangular_number(int $divisors, int $time_limit = 5): int|
     }
 }
 
-function brute_force_count_divisors(int $number): int
+function brute_force_count_divisors(int $number) : int
 {
     $i = 1;
     $divisors = 0;
@@ -57,7 +57,7 @@ function brute_force_count_divisors(int $number): int
 #endregion
 
 #region Optimized
-function triangular_number(int $divisors): int
+function triangular_number(int $divisors) : int
 {
     $i = 1;
 
@@ -74,7 +74,7 @@ function triangular_number(int $divisors): int
 }
 
 // https://www.mathsisfun.com/prime-factorization.html
-function count_divisors(int $num): int
+function count_divisors(int $num) : int
 {
     $count = 1;
     $p = 2;

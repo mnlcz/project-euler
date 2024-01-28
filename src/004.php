@@ -8,7 +8,7 @@
 
 require 'bootstrap.php';
 
-function largest_palindrome(int $digits): string
+function largest_palindrome(int $digits) : string
 {
     $max = generate_starting_number($digits);
     $min = generate_starting_number($digits - 1);
@@ -27,12 +27,12 @@ function largest_palindrome(int $digits): string
     return strval($largest_palindrome);
 }
 
-function generate_starting_number(int $digits): int
+function generate_starting_number(int $digits) : int
 {
     return intval(str_repeat('9', $digits));
 }
 
-function is_palindrome(int $num): bool
+function is_palindrome(int $num) : bool
 {
     return strval($num) === strrev(strval($num));
 }

@@ -9,13 +9,13 @@ require 'bootstrap.php';
 
 use Illuminate\Support\Collection;
 
-function solve(int $limit): int
+function solve(int $limit) : int
 {
     return sieve_of_eratosthenes($limit)->sum();
 }
 
 // https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes
-function sieve_of_eratosthenes(int $limit): Collection
+function sieve_of_eratosthenes(int $limit) : Collection
 {
     // Step 1: fill the collection, assume every number is prime
     $primes = collect(array_fill(2, $limit - 1, true));
@@ -32,9 +32,9 @@ function sieve_of_eratosthenes(int $limit): Collection
             }
         }
     }
-    
+
     // Step 4: collect all primes
-    $primes = $primes->filter(fn($p) => $p)->keys();
+    $primes = $primes->filter(fn ($p) => $p)->keys();
 
     return $primes;
 }

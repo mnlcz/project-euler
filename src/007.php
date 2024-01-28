@@ -8,12 +8,12 @@
 
 require 'bootstrap.php';
 
-function nth_prime(int $nth): int
+function nth_prime(int $nth) : int
 {
     return take_n_primes($nth)->last();
 }
 
-function take_n_primes(int $n): Illuminate\Support\Collection
+function take_n_primes(int $n) : Illuminate\Support\Collection
 {
     $i = 2;
     $primes = collect();

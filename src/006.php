@@ -14,17 +14,17 @@ require 'bootstrap.php';
 
 use Illuminate\Support\Collection;
 
-function solve(Collection $range): int
+function solve(Collection $range) : int
 {
     return square_of_sum($range) - sum_of_squares($range);
 }
 
-function sum_of_squares(Collection $range): int
+function sum_of_squares(Collection $range) : int
 {
-    return $range->reduce(fn($carry, $item) => $carry + $item ** 2, 0);
+    return $range->reduce(fn ($carry, $item) => $carry + $item ** 2, 0);
 }
 
-function square_of_sum(Collection $range): int
+function square_of_sum(Collection $range) : int
 {
     return $range->sum() ** 2;
 }

@@ -118,7 +118,7 @@ $raw = <<<END
 53503534226472524250874054075591789781264330331690
 END;
 
-$nums = collect(explode(PHP_EOL, $raw))->map(fn($line) => BigInteger::of($line));
-$sum = $nums->reduce(fn($prev, $curr) => $prev->plus($curr), BigInteger::of(0));
+$nums = collect(explode(PHP_EOL, $raw))->map(fn ($line) => BigInteger::of($line));
+$sum = $nums->reduce(fn ($prev, $curr) => $prev->plus($curr), BigInteger::of(0));
 
 echo 'The first 10 digits of the sum are: ' . substr($sum, 0, 10);

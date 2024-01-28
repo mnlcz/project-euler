@@ -32,7 +32,7 @@ require 'bootstrap.php';
 
 use Illuminate\Support\Collection;
 
-function get_max_product(Collection $nums): int
+function get_max_product(Collection $nums) : int
 {
     return max(
         search_lr($nums),
@@ -42,7 +42,7 @@ function get_max_product(Collection $nums): int
     );
 }
 
-function search_lr(Collection $nums): int
+function search_lr(Collection $nums) : int
 {
     $curr_max = PHP_INT_MIN;
 
@@ -59,7 +59,7 @@ function search_lr(Collection $nums): int
     return $curr_max;
 }
 
-function search_ud(Collection $nums): int
+function search_ud(Collection $nums) : int
 {
     $curr_max = PHP_INT_MIN;
 
@@ -76,7 +76,7 @@ function search_ud(Collection $nums): int
     return $curr_max;
 }
 
-function search_diag1(Collection $nums): int
+function search_diag1(Collection $nums) : int
 {
     $curr_max = PHP_INT_MIN;
 
@@ -93,7 +93,7 @@ function search_diag1(Collection $nums): int
     return $curr_max;
 }
 
-function search_diag2(Collection $nums): int
+function search_diag2(Collection $nums) : int
 {
     $curr_max = PHP_INT_MIN;
 
@@ -133,6 +133,6 @@ $raw = <<<END
 01 70 54 71 83 51 54 69 16 92 33 48 61 43 52 01 89 19 67 48
 END;
 
-$nums = collect(explode(PHP_EOL, $raw))->map(fn($l) => collect(explode(' ', $l))->map(fn($n) => intval($n)));
+$nums = collect(explode(PHP_EOL, $raw))->map(fn ($l) => collect(explode(' ', $l))->map(fn ($n) => intval($n)));
 
 echo 'Max line product is: ' . get_max_product($nums);

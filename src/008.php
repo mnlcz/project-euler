@@ -27,14 +27,14 @@
 
 require 'bootstrap.php';
 
-function solve(string $nums, int $nth): int
+function solve(string $nums, int $nth) : int
 {
     $max = collect(str_split(nth_max_adj_digits($nums, $nth)));
 
-    return $max->reduce(fn($carry, $n) => $carry * $n, 1);
+    return $max->reduce(fn ($carry, $n) => $carry * $n, 1);
 }
 
-function nth_max_adj_digits(string $nums, int $nth): string
+function nth_max_adj_digits(string $nums, int $nth) : string
 {
     $curr_max = '0';
 
@@ -49,9 +49,9 @@ function nth_max_adj_digits(string $nums, int $nth): string
     return $curr_max;
 }
 
-function str_max_prod(string $n1, string $n2): string
+function str_max_prod(string $n1, string $n2) : string
 {
-    $prod = fn($s) => collect(str_split($s))->map(fn($n) => intval($n))->reduce(fn($x, $y) => $x * $y, 1);
+    $prod = fn ($s) => collect(str_split($s))->map(fn ($n) => intval($n))->reduce(fn ($x, $y) => $x * $y, 1);
 
     return $prod($n1) > $prod($n2) ? $n1 : $n2;
 }
