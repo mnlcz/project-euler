@@ -16,7 +16,7 @@ require 'bootstrap.php';
 
 $collatz_lenghts = new Illuminate\Support\Collection;
 
-function starter_for_longest_sequence(int $collatz_limit, int $time_limit = 5) : int|string
+function starter_for_longest_sequence(int $collatz_limit, int $time_limit = 5): int|string
 {
     $start_time = microtime(true);
     $time_exceeded = fn ($current_time) => $current_time - $start_time > $time_limit;
@@ -39,7 +39,7 @@ function starter_for_longest_sequence(int $collatz_limit, int $time_limit = 5) :
     return $starter;
 }
 
-function collatz_sequence_length(int $n) : int
+function collatz_sequence_length(int $n): int
 {
     global $collatz_lenghts;
 

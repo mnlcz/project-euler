@@ -12,7 +12,7 @@ require 'bootstrap.php';
 $limit = 4_000_000;
 $even_sum = 2;
 
-function fib(int $left, int $right, int $limit, int &$even_sum) : void
+function fib(int $left, int $right, int $limit, int &$even_sum): void
 {
     if ($right >= $limit)
         return;

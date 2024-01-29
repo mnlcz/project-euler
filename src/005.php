@@ -9,7 +9,7 @@
 require 'bootstrap.php';
 
 // Works for 1..10. Takes too long for 1..20, added a simple execution time limitation
-function my_brute_force_solution(array $boundaries, int $time_limit = 5) : int|string
+function my_brute_force_solution(array $boundaries, int $time_limit = 5): int|string
 {
     $i = 11;
     $smallest = null;
@@ -17,7 +17,7 @@ function my_brute_force_solution(array $boundaries, int $time_limit = 5) : int|s
 
     $start_time = microtime(true);
 
-    while (! $smallest) {
+    while (!$smallest) {
         if ((microtime(true) - $start_time) > $time_limit) {
             return "Execution paused. Time limit exceeded.";
         }
@@ -32,7 +32,7 @@ function my_brute_force_solution(array $boundaries, int $time_limit = 5) : int|s
 }
 
 // Did some research online for better solutions and ended with this idea...
-function optimized_solution(array $boundaries) : int
+function optimized_solution(array $boundaries): int
 {
     extract($boundaries);
     $lcm = 1;
@@ -44,7 +44,7 @@ function optimized_solution(array $boundaries) : int
     return (int) $lcm;
 }
 
-function evenly_divisible(int $num, array &$boundaries) : bool
+function evenly_divisible(int $num, array &$boundaries): bool
 {
     extract($boundaries);
 

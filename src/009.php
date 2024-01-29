@@ -11,12 +11,12 @@ require 'bootstrap.php';
 
 use Illuminate\Support\Collection;
 
-function solve() : int
+function solve(): int
 {
     return find_special_triplet()->reduce(fn ($x, $y) => $x * $y, 1);
 }
 
-function find_special_triplet() : Collection
+function find_special_triplet(): Collection
 {
     $n = 1;
     $m = 2;
@@ -37,7 +37,7 @@ function find_special_triplet() : Collection
 }
 
 // $n < $m
-function pythagorean_triplet(int $n, int $m) : Collection
+function pythagorean_triplet(int $n, int $m): Collection
 {
     $a = $m ** 2 - $n ** 2;
     $b = 2 * $m * $n;

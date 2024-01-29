@@ -10,12 +10,12 @@
 require 'bootstrap.php';
 
 // https://math.stackexchange.com/questions/286437/arrangement-of-binary-bits
-function effective_routes_math(int $grid_size) : int
+function effective_routes_math(int $grid_size): int
 {
     return gmp_intval(gmp_fact($grid_size * 2) / (gmp_fact($grid_size) ** 2));
 }
 
-function effective_routes_iter(int $grid_size) : int
+function effective_routes_iter(int $grid_size): int
 {
     $grid = [];
 

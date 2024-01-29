@@ -31,7 +31,7 @@ require 'bootstrap.php';
 
 use Illuminate\Support\Collection;
 
-function get_max_product(Collection $nums) : int
+function get_max_product(Collection $nums): int
 {
     return max(
         search_lr($nums),
@@ -41,7 +41,7 @@ function get_max_product(Collection $nums) : int
     );
 }
 
-function search_lr(Collection $nums) : int
+function search_lr(Collection $nums): int
 {
     $curr_max = PHP_INT_MIN;
 
@@ -58,7 +58,7 @@ function search_lr(Collection $nums) : int
     return $curr_max;
 }
 
-function search_ud(Collection $nums) : int
+function search_ud(Collection $nums): int
 {
     $curr_max = PHP_INT_MIN;
 
@@ -75,7 +75,7 @@ function search_ud(Collection $nums) : int
     return $curr_max;
 }
 
-function search_diag1(Collection $nums) : int
+function search_diag1(Collection $nums): int
 {
     $curr_max = PHP_INT_MIN;
 
@@ -92,7 +92,7 @@ function search_diag1(Collection $nums) : int
     return $curr_max;
 }
 
-function search_diag2(Collection $nums) : int
+function search_diag2(Collection $nums): int
 {
     $curr_max = PHP_INT_MIN;
 
