@@ -9,5 +9,5 @@ Utils
 
 New problem scripts can be generated via ``./new-problem``. Check:
 
-.. code:: shell
+```shell
   ./new-problem --help
