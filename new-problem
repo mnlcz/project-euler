@@ -1,0 +1,59 @@
+#!/usr/bin/env -S guile3 -s
+!#
+
+(use-modules (ice-9 getopt-long))
+
+(define (main)
+  (cond
+    (help-wanted (help))
+    (problem-num (problem-gen))
+    (else (help))))
+
+;; arg rules
+(define option-spec
+  '((problem (single-char #\p) (value #t))
+    (help (single-char #\h) (value #f))))
+
+;; arg values
+(define options (getopt-long (command-line) option-spec))
+(define help-wanted (option-ref options 'help #f))
+(define problem-num (option-ref options 'problem #f))
+
+;; help msg
+(define (help)
+  (display "\
+Usage: new-problem [options]
+
+Options:
+  -h, --help              Display this help message
+  -p, --problem NUMBER    Number of the problem to generate
+
+Examples:
+  new-problem -p 3
+  new-problem --problem 42
+"))
+
+;; script template
+(define template "\
+#!/usr/bin/env -S guile3 -s
+!#
+
+#| <PROBLEM NAME>
+  <PROBLEM EXAMPLE>
+
+  <PROBLEM TASK>
+|#
+
+(use-modules (ice-9 format))
+
+")
+
+;; generate problem script
+(define (problem-gen)
+  (let ((path (string-append "problems/" problem-num ".scm")))
+    (call-with-output-file path
+      (lambda (port)
+        (display template port)))
+    (chmod path #o755)))
+
+(main)
