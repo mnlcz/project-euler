@@ -7,7 +7,6 @@ Problemset provided by the website `Project Euler <https://projecteuler.net/abou
 Utils
 *****
 
-New problem scripts can be generated via ``./new-problem``. Check:
+New problem scripts can be generated via ``./new-problem``. Check: ::
 
-```shell
   ./new-problem --help
