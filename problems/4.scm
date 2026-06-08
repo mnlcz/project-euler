@@ -10,8 +10,7 @@ product of two 2-digit numbers is:
   Find the largest palindrome made from the product of two 3-digit numbers.
 |#
 
-(use-modules (ice-9 format)
-             (srfi srfi-1))
+(use-modules (ice-9 format))
 
 (define (is-pal? num)
   (let ((s-num (number->string num)))
