@@ -1,7 +1,9 @@
 #!/usr/bin/env -S guile -s
+
 !#
 
-#| SMALLEST MULTIPLE
+#|
+SMALLEST MULTIPLE
   2520 is the smallest number that can be divisible by each of the numbers from
 1 to 10 without any remainder.
 
@@ -11,8 +13,8 @@
 (add-to-load-path
   (dirname (dirname (current-filename))))
 (use-modules (ice-9 format)
-             (srfi srfi-1)
-             (utils benchmark))
+  (srfi srfi-1)
+  (utils benchmark))
 
 ;; Sol1: BRUTE-FORCE
 ;; Prep funcs
@@ -43,16 +45,29 @@
 (define (example-bf)
   (let wloop ((num 10))
     (if (and (rule10 num) (rule9 num) (rule8 num) (rule7 num) (rule6 num) (rule5 num)
-             (rule4 num) (rule3 num) (rule2 num))
+         (rule4 num)
+         (rule3 num)
+         (rule2 num))
       num
       (wloop (+ num 10)))))
 ;; Real
 (define (solution-bf)
   (let wloop ((num 10))
     (if (and (rule20 num) (rule19 num) (rule18 num) (rule17 num) (rule16 num)
-             (rule15 num) (rule14 num) (rule13 num) (rule12 num) (rule11 num)
-             (rule10 num) (rule9 num) (rule8 num) (rule7 num) (rule6 num)
-             (rule5 num) (rule4 num) (rule3 num) (rule2 num))
+         (rule15 num)
+         (rule14 num)
+         (rule13 num)
+         (rule12 num)
+         (rule11 num)
+         (rule10 num)
+         (rule9 num)
+         (rule8 num)
+         (rule7 num)
+         (rule6 num)
+         (rule5 num)
+         (rule4 num)
+         (rule3 num)
+         (rule2 num))
       num
       (wloop (+ num 10)))))
 

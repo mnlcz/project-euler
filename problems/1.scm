@@ -1,7 +1,9 @@
 #!/usr/bin/env -S guile -s
+
 !#
 
-#| MULTIPLES OF 3 OR 5
+#|
+MULTIPLES OF 3 OR 5
   If we list all the natural numbers below 10 that are multiples of 3 or 5, we get
 3, 5, 6 and 9. The sum of these multiples is 23.
 
@@ -13,13 +15,13 @@
 
 (define (euler1 limit-ni)
   (let* ((nums (iota (- limit-ni 1) 1))
-        (filtered
-          (filter
-            (lambda (curr)
-              (or
-                (= 0 (modulo curr 5))
-                (= 0 (modulo curr 3))))
-              nums)))
+         (filtered
+           (filter
+             (lambda (curr)
+               (or
+                 (= 0 (modulo curr 5))
+                 (= 0 (modulo curr 3))))
+             nums)))
     (apply + filtered)))
 
 (let ((example (euler1 10)))
