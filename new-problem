@@ -1,4 +1,4 @@
-#!/usr/bin/env -S guile3 -s
+#!/usr/bin/env -S guile -s
 !#
 
 (use-modules (ice-9 getopt-long))
@@ -35,7 +35,7 @@ Examples:
 
 ;; script template
 (define template "\
-#!/usr/bin/env -S guile3 -s
+#!/usr/bin/env -S guile -s
 !#
 
 #| <PROBLEM NAME>

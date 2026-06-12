@@ -1,4 +1,4 @@
-#!/usr/bin/env -S guile3 -s
+#!/usr/bin/env -S guile -s
 !#
 
 #| MULTIPLES OF 3 OR 5

@@ -1,4 +1,4 @@
-#!/usr/bin/env -S guile3 -s
+#!/usr/bin/env -S guile -s
 !#
 
 #| LARGEST PRIME FACTOR
