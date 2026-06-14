@@ -36,7 +36,7 @@ Examples:
 
 ;; script template
 (define template "\
-#!/usr/bin/env -S guile -s
+#!/usr/bin/env -S GUILE_AUTO_COMPILE=0 GUILE_WARN_DEPRECATED=no guile -s
 !#
 
 #| <PROBLEM NAME>
