@@ -21,4 +21,5 @@ we can see that the 6th prime is 13.
         (loop (+ n 1) (+ cnt 1)))
       (loop (+ n 1) cnt))))
 
-(display (nth-prime 6))
+(format #t "Example solution: ~a~%" (nth-prime 6))
+(format #t "Real    solution: ~a~%" (nth-prime 10001))
